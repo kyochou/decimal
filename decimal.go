@@ -454,6 +454,10 @@ func NewFromFloatWithExponent(value float64, exp int32) Decimal {
 	}
 }
 
+func (d Decimal) Exp() int {
+	return int(d.exp)
+}
+
 // Copy returns a copy of decimal with the same value and exponent, but a different pointer to value.
 func (d Decimal) Copy() Decimal {
 	d.ensureInitialized()
